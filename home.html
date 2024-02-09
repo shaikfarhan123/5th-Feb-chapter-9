@@ -1,0 +1,745 @@
+<html>
+    <head>
+        <title>
+        <meta charset="utf-8">
+            <meta name="viewpoint" content="width-device-width, initial-scale=1.0">
+            <link rel="stylesheet" href="style.css">
+        </title>
+    </head>
+    <body>
+        <div>
+            <center>
+                <h4>chapterIX</h4>
+                <h1>The Pitfalls of Knowledge<br>Discovery in Databases <br>and Data Mining</h1>
+                <h6>john wang<br>montclair state University,USA</h6>
+                <h6>Alan Oppenheim<br>Montclair State University, USA</h6>
+                <h1><strong>ABSTARCT</strong></h1>  </center>
+                <P><em>Although Data Mining (DM) may often seem a highly effective tool for companies to be
+using in their business endeavors, there are a number of pitfalls and/or barriers that
+may impede these firms from properly budgeting for DM projects in the short term. This
+chapter indicates that the pitfalls of DM can be categorized into several distinct
+categories. We explore the issues of accessibility and usability, affordability and
+efficiency, scalability and adaptability, systematic patterns vs. sample-specific patterns,
+explanatory factors vs. random variables, segmentation vs. sampling, accuracy and
+cohesiveness, and standardization and verification. Finally, we present the technical
+                    challenges regarding the pitfalls of DM.</em></P>
+
+            <center>
+            <h2>INTRODUCTION</h2>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;“Knowledge discovery in databases (KDD) is a new, multidisciplinary field that
+focuses on the overall process of information discovery in large volumes of warehoused
+data” (Abramowicz & Zurada, 2001). Data mining (DM) involves searching through databases (DBs) for correlations and/or other non-random patterns. DM has been used
+by statisticians, data analysts, and the management information systems community,
+while KDD has been mostly used by artificial intelligence and machine learning researchers. The practice of DM is becoming more common in many industries, especially in the
+light of recent trends toward globalization. This is particularly the case for major
+corporations who are realizing the importance of DM and how it can provide help with
+the rapid growth and change they are experiencing. Despite the large amount of data
+already in existence, much information has not been compiled and analyzed. With DM,existing data can be sorted and information utilized for maximum potential.
+</p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Although we fully recognize the importance of DM, another side of the same coin
+deserves our attention. There is a dark side of DM that many of us fail to recognize and
+without recognition of the pitfalls of DM, the data miner is prone to fall deep into traps.
+Peter Coy (1997) noted four pitfalls in DM. The first pitfall is that DM can produce “bogus
+correlations” and generate expensive misinterpretations if performed incorrectly. The
+second pitfall is allowing the computer to work long enough to find “evidence to support
+any preconception.” The third pitfall is called “story-telling” and says “a finding makes
+more sense if there’s a plausible theory for it. But a beguiling story can disguise
+weaknesses in the data.” Coy’s fourth pitfall is “using too many variables.”</p>
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Other scholars have mentioned three disadvantages of mining a DB: the high
+knowledge requirement of the user; the choice of the DB; and the usage of too many
+variables during the process (Chen & Sakaguchi, 2000; Chung, 1999). “The more factors
+the computer considers, the more likely the program will find relationships, valid or not.”
+(Sethi, 2001, p.69).</p>
+                
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Our research indicated that the pitfalls of DM might be categorized into several
+groups. This chapter will first describe the potential roadblocks in an organization itself.
+Next, we explore the theoretical issues in contrast with statistical inference. Following
+that, we consider the data related issues that are the most serious concern. Here we find
+different problems related to the information used for conducting DM research. Then,
+we present the technical challenges regarding the pitfalls of DM. Finally, there are some
+social, ethical, and legal issues related to the use of DM— the most important of which
+is the privacy issue, a topic that is covered in Chapter 18</p>    
+    </center> 
+           <center><h2>ORGANIZATIONAL ISSUES</h2></center> 
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;DM in an organization has both benefits and drawbacks. Naturally, the manner in
+which we interpret data will determine its ultimate benefit. Gathering data is generally
+not the issue here; there is much data already stored in data warehouses. We need to
+remember that DM, when misinterpreted, may lead to costly errors. There are a number
+of organizational factors and issues that also may be drawbacks and limit DM’s
+implementation and effectiveness. These factors will be discussed in this section.</p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A recent survey of retail IT indicated that of the companies using DM, 53% attribute
+no direct benefit to their bottom line from DM. About 20% of respondents indicated that
+DM has contributed very little, while only 8.4% of the respondents indicated that DM
+has contributed substantially to profitability. Additionally, 64% of all companies responding indicated that they do not plan to use dedicated technology to manage their
+customer relationships (Anonymous, 2001).
+</p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The lack of bottom line results can be partially attributed to a number of organizational factors. First, start-up costs for implementing DM projects are very high and can
+create barriers that many corporations choose not to overcome. There are also short-term
+and long-term administrative costs associated with DM. The information and output
+provided by DM systems must be delivered to end-users within the organization in a
+meaningful form, otherwise the information may not be useable, or worse, may be used
+inappropriately. This can actually lead to a reduction in the return on investment (ROI).</p>
+            <P>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Finally, organizations implementing DM systems must view the project as an
+enterprise-wide endeavor, rather than a departmental endeavor. Failure to address these
+problems will limit a firm’s ability to successfully implement DM initiatives and recognize
+the benefits to its profitability.</P>
+            <p></p>
+            <h2>Qualifications of Information Technology (IT) Staff</h2>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The move by corporations to DM has added to the administrative burdens of
+already overworked IT staffs. Often, DM requires that data be accessible 24 hours a day,
+7 days a week, and that it is adequately protected at all times. This is a very difficult task
+given the shortage of personnel available for around-the-clock management. Before the
+project even begins, it is vital that IT staffs qualify the current network hardware and
+software, particularly in terms of how much data will be held on the servers.
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Additionally, they must qualify the amount of data that will be handled on a daily
+basis, the devices that are already in place to perform data backup and recovery, and the
+software running those devices. Careful analysis must be given to the current network
+configuration, the number of servers, their location, where those servers are administered, and where and how the data are backed up. Administrators must also analyze future needs for the corporation, such as employees, functions, and business processes.</p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Successful DM projects require two components: appropriate technical expertise,
+and an appropriate technical infrastructure for accessing the Web. Many problems can
+be traced back to these two issues. Other pitfalls include inadequate technical expertise,
+inadequate planning, inadequate integration, and inadequate security (Griffin, 2000).</p>
+            <h2>Requirements of Information Technology
+Infrastructure (ITIS)</h2>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;In general, for most corporations that are involved in the process of DM, ITIS is not
+a major issue because they will already have an ITIS and sufficient hardware/software
+in place to handle DM algorithms. Please note that the IT structure meant here is not
+limited to hardware and software but also includes personnel. Another simple point to
+keep in mind here is that the more data being mined, the more powerful the ITIS required.</p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;An ITIS does become an issue for companies that do not have one in place.
+            Establishing one will usually involve rather large capital expenditures, and this cost
+            would not be limited to a one-time event. Instead, as software and hardware modifications
+            are made, it will be necessary for capital expenditures to continue to be made for maintenance and future upgrades of the existing ITIS. Total cost of ownership (TCO)
+            will be very high. This might become even more of an issue for smaller to medium-sized
+            firms that might not have sufficient resources for such measures.
+            </p>
+            <h2>Accessibility and Usability</h2>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Many organizations have experienced serious problems implementing a standard
+DM project. Most problems can do not lie with the technology, but rather with the people
+using it. To have a successful impact on an organization, a DM system must be speedy,
+accessible, and user friendly. In today’s highly technological society, many of these
+systems employ very sophisticated tools running against data stored on high-end
+systems, but it is important that management can interpret the end results. The
+information desired must be accessible quickly through a PC or Web browser. If the endusers have difficulty using a system or cannot deliver needed information in a short time
+and be able to resolve their needs, they may abandon the application altogether, and
+hence the benefits will not be realized.</p>
+            <h2>Affordability and Efficiency</h2>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A simple pitfall that must be viewed by potential DM users is its cost, which can
+range from a just a few thousand to millions of dollars for both hardware and software.
+Implementing an effective DM system can be a very complicated and expensive endeavor
+for a firm. META Group (2001) estimates that within the next two years, “the top 2000
+global firms will spend $250 million each on Customer Relationship Management (CRM)
+and DM solutions.” On the average, data warehouse users spent an average of $6 million
+on their data warehouse in 1998. This cost has been rising at an annual rate of 35% since
+1996 (Groth, 2001).
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Given these costs, corporate executives who may be seeking to cut expenses and
+contain losses may not want to invest the resources needed to develop such a system.
+Add to this that this development may take a few years to implement and may not have
+an immediate, observable impact on the firm’s profitability, and corporate reluctance is
+even clearer. Furthermore, even with all of the money being spent on DM projects, many
+companies have not been able to calculate the resulting ROI for these systems. As a
+result, all too often corporate executives do not view DM projects in the appropriate
+    manner, i.e., as long-term strategic investments.</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;It becomes apparent that expenditures towards maintaining DM through faster
+hardware and more powerful DM applications will become a constant cash outflow for
+many companies. As the DB increases in size over time, more capital will be needed for
+hardware and software upgrades. While this might not represent a large commitment for
+companies of substantial size, small to medium-sized firms may not be able to afford an
+    ITIS or a DM application and the support it needs over the long term.</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Efficiency may be defined as a measure of the ability to do a task within certain time
+and space constraints and should include the bottlenecks that might arise in a system
+when doing certain tasks (Wasserman, 1999). As a dataset becomes larger, most IT
+managers will want to reduce bottlenecks in the network to increase speed or supplement
+processing power through investment in new hardware.
+    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The costs of implementing DM systems may include the costs of intellectual
+property, licensing, hardware, and software, and are especially burdensome to small firms
+because these represent a much larger percentage of small firm’s revenues. This may
+place a greater burden on the small firm’s ability to identify and realize measurable results
+quickly. Failure to do so may even jeopardize the company’s very survival. This requires
+extreme patience, vision, and long-range planning to build a successful system.</p>
+            <h2>Scalability and Adaptability</h2>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Scalability refers to how well a computer system’s hardware or software can adapt
+to increased demands. Since DM tends to work with large amounts of data, scalability
+of the computer system often becomes a major issue. The network and computers on the
+network must be scalable or large enough to handle increased data flows, otherwise this
+may bring a network or individual computers on the network to a grinding halt. Also,
+system solutions need to be able to grow along with evolving user needs in such a way
+as to not lock the organization into a particular vendor’s infrastructure as technology
+changes.
+ <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;This is highlighted as an important issue as the volume of data has increased in
+recent years at a significant rate. One paper further points out, “that some companies
+already have data warehouses in the terabyte range (e.g., FedEx, UPS, Wal-Mart).
+Similarly, scientific data is reaching gigantic proportions (e.g., NASA space missions,
+     Human Genome Project)” (Two Crows Corporation, 2001).</p>
+ <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Most recent research notes scalability as a possible pitfall of DM. Even in the cases
+of very simple forms of data analysis, speed and memory become issues. Since hard drive
+access speed or network speed is not as fast as resident memory, many older DM
+applications prefer to be loaded into memory. As the datasets become larger or more
+variables are added, it follows that the amount of memory needed increases. Without this
+hardware, virtual memory may have to be used. In general terms, virtual memory is a
+process of using space on the hard driveto serve as actual memory. The problem with
+virtual memory is that it is slower, which in turn makes DM slower.</p>
+            <h2>An Enterprise View</h2>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Another organizational factor that can be a problem to DM is not viewing the project
+as an enterprise-wide endeavor. In many failed DM projects, companies viewed DM as
+an IT project that was relegated to a specific department, rather than an enterprise-wide
+initiative. Most DM initiatives have been fragmented, implemented within departments
+without a cross-organizational perspective.</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Given the cost and scope of DM projects, it is essential that all facets of the business
+have representation in the design of the system. Customer information is vital to the
+overall success of sales, marketing, and customer service, and this information must be
+shared across the organization. If one or more departments are excluded from this design
+process, there will be an inclination to not accept the finished product, or departments
+will lack the required knowledge to operate the system successfully.
+</p>
+            <h2>Final Thoughts on Organizational Implications</h2>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;There are many organizational factors that can serve as drawbacks to successful
+utilization of DM. Initially, organizations may balk at the high price tag that is associated
+with DM, and choose to not invest in items such as computer hardware, software, etc.
+The decision to do so may only come with plausible estimations of ROI, something, as
+was said above, that is often very difficult to measure. The output provided by DM must
+be usable information that can be quickly acted upon; otherwise, end-users will not rely
+on or effectively use the information.</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Finally, DM must be viewed as a company-wide initiative. That way all employees
+will feel that they have a stake in the systems outcome. Failure to take this route may result
+in failure of the DM project. Remember that failure rates are often as high as 70%.
+Companies embarking on such projects must take these issues into account when making
+decisions.
+</p>
+            <center><h2>STATISTICAL ISSUES</h2></center>
+            <h2>Sstematic Patterns vs. Sample-Specific</h2>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;There are two main goals of time series analysis: (a) identifying the nature of the
+phenomenon represented by the sequence of observations, and (b) forecasting (predicting future values of the time series variable). Both of these goals require that the pattern
+of observed time series data is identified and more or less formally described. Once the
+pattern is established, we can interpret and integrate it with other data. Regardless of
+the depth of our understanding and the validity of our interpretation of the phenomenon,
+we can extrapolate (ceteris paribus) the identified pattern to predict future events. Pyle
+(1999) argued that series data had many of the problems non-series data had. Series data also had a number of own special problems.</p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Temporal DM pertains to trying to forecast events that may occur in the future.
+Trends usually are regarded with the incline or decline of something. There could also
+be seasonal patterns that could be tracked over the years that will allow future outcomes
+to be predicted. There is also an irregular pattern that has erratic outcomes and follows
+no true pattern. The shortcoming of temporal DM is when something follows the irregular
+pattern. For the most part, events that follow a pattern continue to follow that course,
+but occasionally an outcome will occur that will be unexpected. These outcomes could
+be a result of something that the decision maker could not foresee happening in the near
+future, and may make the outcome of any analysis worthless. Temporal DM would not
+be able to foresee this happening because its user would not be able to predict this occurrence.</p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;As DM is used more extensively, caution must be exercised while searching through
+DBs for correlations and patterns. The practice of using DM is not inherently bad, but
+the context in how it is used must be observed with a keen and practiced eye. Possibly
+the most notorious group of data miners are stock market researchers who seek to predict
+future stock price movement. Basically, past performance is used to predict future
+results. There are a number of potential problems in making the leap from a back-tested
+strategy to successfully investing in future real-world conditions. The first problem is determining the probability that the relationships occurred at random or whether the anomaly may be unique to the specific sample that was tested. Statisticians are fond of
+pointing out that if you torture the data long enough, it will confess to anything (McQueen & Thorley, 1999).</p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;In describing the pitfalls of DM, Leinweber “sifted through a United Nations CDROM and discovered that, historically, the single-best predictor of the Standard & Poor’s
+500-stock index was butter production in Bangladesh.” The lesson to learn here is that
+a “formula that happens to fit the data of the past won’t necessarily have any predictive
+value” (Investor Home, 1999). The “random walk theory” of stock prices suggests that
+securities prices cannot be forecasted. Successful investment strategies—even those
+that have been successful for many years—may turn out to be fool’s gold rather than
+a golden chalice.</p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Given a finite amount of historical data and an infinite number of complex models,
+uninformed investors may be lured into “overfitting” the data. Patterns that are assumed
+to be systematic may actually be sample-specific and therefore of no value (Montana,
+2001). When people search through enough data, the data can be tailored to back any
+theory. The vast majority of the things that people discover by taking standard
+mathematical tools and sifting through a vast amount of data are statistical artifacts.</p>
+            <h2>Explanatory Factors vs. Random Variables</h2>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The variables used in DM need to be more than variables; they need to be
+explanatory factors. If the factors are fundamentally sound, there is a greater chance the
+DM will prove to be more fruitful. We might review the relationship in several, distinct
+time periods. A common mistake made by those inexperienced in DM is to do “data
+dredging,” that is, simply attempting to find associations, patterns, and trends in the data
+by using various DM tools without any prior analysis and preparation of the data. Using
+multiple comparison procedures indicates that data can be twisted to indicate a trend
+if the user feels so inclined (Jensen, 1999). Those who do “data dredging” are likely to
+find patterns that are common in the data, but are less likely to find patterns that are rare events, such as fraud.</p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;An old saw that may fit in the analysis of DM is “garbage in, garbage out.” One of
+the quirks of statistical analysis is that one may be able to find a factor that seems very
+highly correlated with the dependent variable during a specific time period, but such a
+relationship turns out to be spurious when tested in other time periods. Such spurious
+correlations produce the iron pyrite (“fool’s gold”) of DM. However, even when
+adjustments are made for excessive collinearity by removing less explanatory, co-linear
+variables from the model, many such models have trouble withstanding the test of time
+(Dietterich, 1999). Just as gold is difficult to detect in the ground because it is a rare and
+precious metal, so too are low-incidence occurrences such as fraud. The person mining
+has to know where to search and what signs to look for to discover fraudulent practice,
+which is where data analysis comes in.</p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Statistical inference “has a great deal to offer in evaluating hypotheses in the
+search, in evaluating the results of the search and in applying the results” (Numerical
+Machine Learning, 1997). Any correlation found through statistical inference might be
+considered completely random and therefore not meaningful. Even worse, “variables not included in a dataset may obscure relationships enough to make the effect of a variable appear the opposite from the truth” (Numerical Machine Learning, 1997). Furthermore,
+other research indicates that on large datasets with multiple variables, results using
+statistics can become overwhelming and therefore be the cause of difficulty in interpreting results</p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Hypothesis testing is a respectable and sometimes valuable tool to assess the
+results of experiments. However, it too has difficulties. For example, there may be a
+problem with the asymmetry in the treatment of the null and alternative hypotheses,
+which will control the probability of Type I errors, but the probability of Type II errors
+may have to be largely guessed (Berger & Berry, 1988). In practice, the approach is not
+followed literally—common sense prevails. Rather than setting an α in advance and then
+acting accordingly, most researchers tend to treat the p-value obtained for their data as
+a kind of standardized descriptive statistic. They report these p-values, and then let
+others draw their own conclusions; such conclusions will often be that further experiments are needed. The problem then is that there is no standard approach to arriving at a final conclusion. Perhaps this is how it should be, but this means that statistical tests
+are used as a component in a slightly ill-defined mechanism for accumulating evidence,
+rather than in the tidy cut-and-dried way that their inventors were trying to establish. The
+rejection/acceptance paradigm also leads to the problem of biased reporting. Usually,
+positive results are much more exciting than negative ones, and so it is tempting to use
+low p-values as a criterion for publications of results. Despite these difficulties, those
+who seek rigorous analysis of experimental results will often want to see p-values, and
+provided its limitations are borne in mind, the hypothesis testing methodology can be
+applied in useful and effective ways.</p>
+            <h2>Segmentation vs. Sampling</h2>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Segmentation is an inherently different task from sampling. As a segment, we
+deliberately focus on a subset of data, sharpening the focus of the analysis. But when
+we sample data, we lose information because we throw away data not knowing what to
+keep and what to ignore. Sampling will almost always result in a loss of information, in
+                particular with respect to data fields with a large number of non-numeric values.</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Most of the time it does not make sense to analyze all of variables from a large dataset
+because patterns are lost through dilution. To find useful patterns in a large data
+warehouse, we usually have to select a segment (and not a sample) of data that fits a
+business objective, prepare it for analysis, and then perform DM. Looking at all of the
+data at once often hides the patterns, because the factors that apply to distinct business
+    objectives often dilute each other.</p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;While sampling may seem to offer a short cut to faster data analysis, the end results
+are often less than desirable. Sampling was used within statistics because it was so
+difficult to have access to an entire population. Sampling methods were developed to
+allow for some rough calculations about some of the characteristics of the population
+without access to the entire population. This contradicts having a large DB. We build
+DBs of a huge customer’s behavior exactly for the purpose of having access to the entire
+population. Sampling a large warehouse for analysis almost defeats the purpose of
+having all the data in the first place (Data Mines for Data Warehouses, 2001).</p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;In discussing some pitfalls of DM, the issue of how to avoid them deserves mention.
+There are unique statistical challenges produced by searching a space of models and
+                evaluating model quality based on a single data sample. Work in statistics on <em>specification searches </em>and<em> multiple comparisons</em> has long explored the implications of DM, and statisticians have also developed several adjustments to account for the effects of
+                search. Work in machine learning and knowledge discovery related to <em>overfilling </em>and
+                <em>oversearching</em> has also explored similar themes, and researchers in these fields have also
+                developed techniques such as <em>pruning</em> and <em>minimum description length encoding </em>to
+adjust for the effects of the search (Jensen, 1999). However, this “dark side” of DM is
+                still largely unknown to some practitioners, and problems such as <em>overfilling</em> and
+                <em>overestimation </em>of accuracy still arise in knowledge discovery applications with surprising regularity. In addition, the statistical effects of the search can be quite subtle, andthey can trip up even experienced researchers and practitioners.</p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A very common approach is to obtain new data or to divide an existing sample into
+two or more subsamples, using one subsample to select a small number of models and
+                other subsamples to obtain unbiased scores. <em>Cross-validation</em> is a related approach that
+can be used when the process for identifying a “best” model is algorithmic. Sometimes,
+                <em>incremental induction</em> is efficient (Hand, Mannila, & Smyth, 2001). A model is developed
+on a small data sample and, while suggestive of an interesting relationship, it does not
+exceed a prespecified critical value. Another small sample of data becomes available later,
+but it is also too small to confer statistical significance to the model. However, the
+relationship would be significant if considered in the context of both data samples
+together. This indicates the importance of maintaining both tentative models and links
+to the original data (Jensen, 2001).
+Several relatively simple mathematical adjustments can be made to statistical
+significance tests to correct for the effects of multiple comparisons. These have been
+explored in detail within the statistical literature on experimental design. Unfortunately,
+the assumptions of these adjustments are often restrictive. Many of the most successful
+                approaches are based on computationally intensive techniques such as <em>randomization</em>
+                and<em> resampling </em>(Saarenvirta, 1999). <em>Randomization </em>tests have been employed in several
+knowledge discovery algorithms. Serious statistical problems are introduced by searching large model spaces, and unwary analysts and researchers can still fall prey to these
+pitfalls.</p>
+            <h2>DATA ACCURACY AND STANDARDIZATION</h2>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Another important aspect of DM is the accuracy of the data itself. It follows that
+poor data are a leading contributor to the failure of DM. This factor is a major business
+challenge. The emergence of electronic data processing and collection methods has lead
+some to call recent times as the “information age.” However, it may be more accurately
+termed as “analysis paralysis.” Most businesses either posses a large DB or have access
+to one. These DBs contain so much data that it may be quite difficult to understand what
+that data are telling us. Just about all transactions in the market will generate a computer
+record somewhere. All those data have meaning with respect to making better business
+decisions or understanding customer needs and preferences. But discovering those needs and preferences in a DB that contains terabits of seemingly incomprehensible
+numbers and facts is a big challenge (Abbot, 2001).
+</p>
+            <h2>Accuracy and Cohesiveness</h2>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A model is only as good as the variables and data used to create it. Many dimensions
+of this issue apply to DM, the first being the quality and the sources of the data. We
+repeatedly can find that data accuracy is imperative to very crucial functions. Administrative data are not without problems, however. Of primary concern is that, unlike a
+purposeful data collection effort, the coding of data is often not carefully quality
+controlled. Likewise, data objects may not necessarily be defined commonly across DBs
+or in the way a researcher would want. One of the most serious concerns is matching
+records across different DBs in order to build a more detailed individual record. In
+addition, administrative records may not accurately represent the population of interest,
+leading to issues similar to sampling and non-response bias. Transaction records and
+other administrative data are volatile, that is, rapidly changing over time, so that a
+snapshot of information taken at one time may not indicate the same relationships that
+an equivalent snapshot taken at a later time (or using a different set of tables) would
+reveal. Finally, programs and regulations themselves may introduce bias into administrative records, thus making them unreliable over time (Judson, 2000).</p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;No matter how huge a company’s datasets may be, freshness and accuracy of the
+data are imperative for successful DM. Many companies have stores of outdated and
+duplicate data, as anyone who has ever received multiple copies of the same catalog can
+attest. Before a company can even consider what DM can do for business, the data must
+be clean and fresh, up-to-date, and error- and duplication-free. Unfortunately, this is
+easier said than done. Computer systems at many large companies have grown rather
+complicated over the years by encompassing a wide variety of incompatible DBs and
+systems as each division or department bought and installed what they thought was best
+for their needs without any thought of the overall enterprise. This may have been further
+complicated through mergers and acquisitions that may have brought together even
+more varied systems. “Bad data, duplicate data, and inaccurate and incomplete data are
+a stumbling block for many companies” (E-commag, 2001).</p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The first step to achieve proper DM results is to start with the correct raw data. For
+companies to mine their customer transaction data (which sometimes has additional
+demographic information), they can figure out an “ad infinitum” value of revenue for each
+customer. It is clear here that it is very important for companies to get proper data
+accuracy for forecasting functions. Poor data accuracy can lead to the risk of poor pro
+forma financial statements.</p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;With accurate data, one should be able to achieve a single customer view. This will
+eliminate multiple counts of the same individual or household within and across an
+enterprise or within a marketing target. Additionally, this will normalize business
+information and data. With an information quality solution, one will be able to build and
+analyze relationships, manage a universal source of information, and make more informed
+business decisions. By implementing an information quality solution across an organization, one can maximize the ROI from CRM, business intelligence, and enterprise
+applications.
+</p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;If dirty, incomplete, and poorly structured data are employed in the mining, the task
+of finding significant patterns in the data will be much harder. The elimination of errors,
+removal of redundancies, and filling of gaps in data (although tedious and timeconsuming tasks), are integral to successful DM (Business Lounge, 2001)</p>
+            <h2>Standardization and Verification</h2>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Data in a DB or data store are typically inconsistent and lacking conformity. In some
+cases, there are probably small variations in the way that even the subscriber’s name or
+address appear in a DB. This will lead to the allocation of organizational resources based
+on inaccurate information. This can be a very costly problem for any organization that
+routinely mails against a large customer DB. An added difficulty of getting these correct
+data sources for data accuracy is the large amount of the sources themselves. The number
+of enterprise data sources is growing rapidly, with new types of sources emerging every
+year. The newest source is, of course, enterprise e-business operations. Enterprises
+want to integrate clickstream data from their Web sites with other internal data in order
+to get a complete picture of their customers and integrate internal processes. Other
+sources of valuable data include Enterprise Resource Planning (ERP) programs, operational data stores, packaged and home-grown analytic applications, and existing data
+marts. The process of integrating these sources into one dataset can be complicated and
+is made even more difficult when an enterprise merges with or acquires another
+enterprise.</p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Enterprises also look to a growing number of external sources to supplement their
+internal data. These might include prospect lists, demographic and psychographic data,
+and business profiles purchased from third-party providers (Hoss, 2001). Enterprises
+might also want to use an external provider for help with address verification, where
+internal company sources are compared with a master list to ensure data accuracy.
+Additionally, some industries have their own specific sources of external data. For
+example, the retail industry uses data from store scanners, and the pharmaceutical
+industry uses prescription data that are totaled by an outsourced company.</p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Although data quality issues vary greatly from organization to organization, we can
+discuss these issues more effectively by referring to four basic types of data quality
+categories that affect IT professionals and business analysts on a daily basis. These
+categories —standardization, matching, verification, and enhancement — make up the
+general data quality landscape (Moss, 2000).</p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<em>Verification</em> is the process of verifying any other type of data against a known
+correct source. For example, if a company decided to import some data from an outside
+vendor, the U.S. Postal Service DB might be used to make sure that the ZIP codes match
+the addresses and that the addresses were deliverable. If not, the organization could
+potentially wind up with a great deal of undeliverable mail. The same principle would
+apply to verifying any other type of data. Using verification techniques, a company
+ensures that data are correct based on an internal or external data source that has been
+verified and validated as correct.</p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<em>Enhancement</em>t of data involves the addition of data to an existing data set or actually
+changing the data in some way to make it more useful in the long run. Enhancement technology allows a company to get more from its data by enriching the data with
+additional information.</p>
+            <h2>Data Sampling and Variable Selection</h2>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Data accuracy can also fall victim to the potential of corruption by means of data
+sampling. This is not to say that the information is necessarily wrong per se, but in fact
+the sample of information that is taken may not be wholly representative of what is being mined.</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Apart from sampling, summarization may be used to reduce data sizes (Parsaye,
+1995). But summarization can cause problems too. In fact, the summarization of the same
+dataset with two sampling or summarization methods may yield the same result, and the
+summarization of the same dataset with two methods may produce two different results.</p>
+            <h2>Outliers and Noise</h2>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Outliers are variables that have a value that is far away from the rest of the values
+for that variable. One needs to investigate if there is a mistake due to some external or
+internal factor, such as a failing sensor or a human error. If it can be established that the
+outlier is due to a mistake, Pyle (1999) suggests that it should be corrected by a filtering
+process or by treating it like a missing value.</p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Noise is simply a distortion to the signal and is something integral to the nature of
+the world, not the result of a bad recording of values. The problem with noise is that it
+does not follow any pattern that is easily detected. As a consequence of this, there are
+no easy ways to eliminate noise but there are ways to minimize the impact of noise.</p>
+            <h2>Missing Values or Null Values</h2>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Companies rely on data for a variety of different reasons —from identifying
+opportunities with customers to ensuring a smooth manufacturing process — and it is
+impossible to make effective business decisions if the data are not good. In order to be
+able to fully assess these solutions, it is helpful to have a thorough understanding of the
+basic types of data quality problems. As companies look to address the issue of data
+quality, there are five basic requirements to consider when looking for a total data quality
+management solution: ease of use, flexibility, performance, platform independence, and
+affordability (Atkins, 2000).</p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Because DBs often are constructed for other tasks than DM, attributes important
+for a DM task could be missing. Data that could have facilitated the DM process might
+not even be stored in the DB. Missing values can cause big problems in series data and
+series modeling techniques. There are many different methods for “repairing” series data
+with missing values such as multiple regression and autocorrelation. Chapter 7 addresses this problem in detail</p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Therefore, data quality control is a serious problem. Data inconsistency and data
+redundancy might mire any data-mining effort. Data quality is a company-wide problem
+that requires company-wide support. A total data quality solution must be able to address the needs of every individual within an organization, from the business analysts
+to the IT personnel. To meet the needs of these diverse groups, a solution must integrate
+with current IT tools and still be easy to use. For companies to truly thrive and achieve
+successful business intelligence, data quality must be an issue that is elevated to top
+priority.</p>
+            <center><h2>TECHNICAL ISSUES</h2></center>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;There are many technical challenges regarding DM. These technical issues can
+cover a whole spectrum of possibilities. However, in this discussion, technical issues
+will be limited to the pitfalls regarding certain DM methods and other general technical
+issues affecting a standard IT department. The selected technical methods reviewed for
+pitfalls that are used by DM are neural networks, decision trees, genetic algorithms, fuzzy
+logic, and data visualization. General technical issues covered relate to requirements of
+disaster planning.</p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;When reviewing DM for technical issues, an obvious point that might be initially
+missed by new users is that DM does not automatically happen by just loading software
+onto a computer. Many issues must be painstakingly thought out prior to moving
+forward with DM. There is no single superior DM method that exists among the more than
+25 different types of methods currently available. If there were one specific method that
+was best and without any disadvantages, then there would be no need for all of these
+different types of methods. One company even noted, with regards to DM, that there
+“is no predictive method that is best for all applications” (International Knowledge
+Discovery Institute, 1999). Therefore, when a company begins dealings with prospective
+clients, after having already gained a thorough understanding of the client’s problem,
+it will use 8 to 10 different DM methods in an effort to find the best application for the
+client. Listed below are a few examples of some DM methods generally used.</p>
+            <h2>The Problems with Neural Networks (NNs)</h2>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Neural networks (or neural nets) are computer functions that are programmed to
+imitate the decision-making process of the human brain. NNs are one of the oldest and
+most frequently used techniques in DM. This program is able to choose the best solution
+for a problem that contains many different outcomes. Even though the knowledge of how
+human memory works is not known, the way people learn through constant repetition is
+not a mystery. One of the most important abilities that humans possess is the capability
+to infer knowledge. NNs are very useful, not because the computer is coming up with
+a solution that a human would not come up with, but rather that they are able to arrive
+at that solution much faster. “In terms of application, NNs are found in systems
+performing image and signal processing, pattern recognition, robotics, automatic navigation, prediction and forecasting, and a variety of simulations” (Jones, 2001)</p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;There are several possible pitfalls regarding NNs. One issue is related to learning.
+A drawback of this process is that learning or training can take a large amount of time
+and resources to complete. Since results or the data being mined are time critical, this can pose a large problem for the end-user. Therefore, most articles point out that NNs
+are better suited to learning on small to medium-sized datasets as it becomes too time
+inefficient on large-sized datasets (Hand, Mannila, & Smyth, 2001).
+</p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Also, NNs lack explicitness. As several researchers have pointed out, the process
+it goes through is considered by most to be hidden and therefore left unexplained. One
+article summarized, “It is almost as if the pattern-discovery process is handled within a
+black box procedure” (Electronic Textbook Statsoft.com, 2001). This lack of explicitness
+may lead to less confidence in the results and a lack of willingness to apply those results
+from DM, since there is no understanding of how the results came about. It becomes
+obvious as the datasets variables increase in size, that it will become more difficult to
+understand how the NN came to its conclusions.</p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Another possible weakness is that the program’s capability to solve problems could
+never exceed that of the user’s. This means that the computer will never able to produce
+a solution that a human could not produce if given enough time. As a result, the user
+has to program problems and solutions into the computer so that it can decide what are
+the best solutions. If the user has no answer(s), chances are neither will the computer.</p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A final drawback of NNs noted in one paper is that “there is a very limited tradition
+of experience on which to draw when choosing between the nets that are on offer”
+(Australian National University, 2001). This lack of knowledge or general review on
+which type of NNs is best might result in the purchase of an application that will not make
+the best predictions or in general will just work poorly.</p>
+            <h2>The Problems with Decision Trees (DTs)</h2>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The Decision Tree (DT) is a method that uses a hierarchy of simple if-then
+statements in classifying data. This tends to be one of the most inexpensive methods
+to use. However, it is faster to use, easier to generate understandable rules, and simpler
+to explain since any decision that is made can be understood by viewing the path of
+decisions. DTs provide an effective structure in which alternative decisions and the
+implications of taking those decisions can be laid down and evaluated. They also help
+to form an accurate, balanced picture of the risks and rewards that can result from a
+particular choice. However, for all its advantages, there are also some disadvantages or
+possible pitfalls of which users should be aware.</p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The problems with DTs can be divided into two categories: algorithmic problems
+that complicate the algorithm’s goal of finding a small tree, and inherent problems with
+the representation. The conventional DT is useful for small problems but quickly
+becomes cumbersome and hard to read for intermediate-sized problems. In addition,
+special software is required to draw the tree. Representing all the information on the tree
+requires writing probability numbers and payoff numbers under the branches or at the
+ends of the nodes of the tree (KDNuggets, 2001).</p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;In DTs learning, the goal is to arrive at a classification while minimizing the depth
+of the final tree. Choosing attributes that divide the positive examples from the negative
+examples does this. Thus, if there is noise in the training set, DTs will fail to find a valid
+tree.</p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A big headache is that the data used must be interval or categorical. Therefore, any
+data not received in this format will have to be recoded to this format in order to be used.
+</p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;This recoding could possibly hide relationships that other DM methods would find.
+                Also, <em>overfitting </em>can occur whenever there is a large set of possible hypotheses. A
+                technique to deal with this problem is to use DT <em>pruning</em>. Pruning prevents recursive
+splitting if the relevance of the attribute is low.</p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Another possible drawback is that the DTs generally represent a finite number of
+classes or possibilities. It becomes difficult for decision makers to quantify a finite
+amount of variables. Due to this limitation, the accuracy of the output will be limited to
+the number of classes selected that may result in a misleading answer. Even worse, if the
+user does try to cover an acceptable number of variables, as the list of variables increase,
+the if-then statements created can become more complex.</p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Finally, there are two other separate drawbacks due to variable systematic risk.
+First, DTs are not appropriate for estimation. This is based on the fact that complicated,
+but understandable, rules must be adhered to. Therefore, estimation would not be
+appropriate. Second, this method is not useful for all types of DM. It is “hard to use DTs
+for problems involving time series data unless a lot of effort is put into presenting the
+data in such a way that trends are made visible” (Knowledge Acquisition Discovery
+Management, 1997).</p>
+            <h2>The Problems with Genetic Algorithms (GAs)</h2>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Genetic Algorithms (GAs) relate to evolutionary computing that solves problems
+through application of natural selection and evolution. Evolutionary computing is a
+component of machine learning, “a sub-discipline of artificial intelligence” (Sethi, 2001,
+p. 33). It is a “general-purpose search algorithm” (Chen, 2001, p. 257) that utilizes rules
+mimicking a population’s natural genetic evolution to solving problems. Fundamentally,
+they are free of derivatives (or outgrowths) and are best utilized in optimization problems
+with allegories founded in evolutionary operations such as selection, crossover, and
+mutation.</p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A chromosome in computer language is a string of binary bits in which the possible
+solution is encoded. The term “fitness function” is designated to mean the quality of
+the solution. Beginning with a random accumulation of potential solutions, the search
+creates what is termed the “gene pool or population” (Sethi, 2001, p. 37). Upon each
+completion of a search, a new pool is constructed by the GA, and the pool has evolved
+with improved “fitness values.” The most desirable solution is chosen from resulting
+generations of GAs.</p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Despite these advantages, these algorithms have not yet been applied to very largescale problems. One possible reason is that GAs require a significant computational
+effort with respect to other methods, when parallel processing is not employed (Sethi,
+2001, p. 39).</p>
+            <h2>The Problems With Fuzzy Logic (FL)</h2>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Fuzzy Logic (FL), first developed by Lotfi Zadeh, uses fuzzy set theory. FL is a multivalued (as opposed to binary) logic developed to deal with imprecise or vague data.Copyright © 2003, Idea Group Inc. Copying or distributing in print or electronic forms without written
+permission of Idea Group Inc. is prohibited.
+Although there are some limitations to using FL, the main reason that it is not used very
+widely is that many people are misinformed about it. The difficulties of using FL are
+different than those of using conventional logic. In addition to technical difficulties, lack
+of knowledge about this rather new field also causes many problems.</p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;How to define membership functions is a common problem. The rules will be based
+on trial and error, rather than the designer’s intuition and knowledge. Critics argue that
+this process—in contrast to the rigid mathematical design process of conventional
+devices— could lead to undesired outcomes under abnormal circumstances (Pagallo &
+Haussler, 1990).</p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Lack of knowledge and/or misinformation about FL are the main reasons it is still
+a relatively small field. Many critics argue that FL is a fad. They feel it will not be useful
+since there is no known way to guarantee that it will work under all circumstances. Also,
+many argue that conventional methods work just or nearly as well, so it is not worthwhile
+to develop new methods (Chen, 2001).</p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Another concern seems to be the language barrier. Japanese engineers have
+pursued FL even though the University of California was its birthplace. It seems as if
+many American researchers have shunned it. Although technical terms often have a
+                neutral connotation, the Japanese term for FL clearly has a positive tone <em>(clever)</em>. Unlike
+                the trendy Japanese term, Americans assign a negative connotation to <em>fuzzy</em>. Despite
+Japanese and worldwide successes, this technology is still somewhat underdeveloped
+in the United States.</p>
+            <h2>The Problems with Data Visualization</h2>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;This is a method that allows the user to gain a more intuitive understanding of the
+data. Generally, graphics tools used better illustrate relationships among data. Data
+visualization further allows the user to more easily focus and see the patterns and trends
+amongst the data. However, the major pitfall in this case is that as the volume of data
+increases, it can become increasingly difficult to discern accurate patterns from the data
+sets.</p>
+            <h2>Disaster Planning</h2>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Finally, disaster recovery plans must be analyzed. This may result in the need to
+redesign data backup management techniques to accommodate business growth. Once
+a coherent plan to accommodate the current and future business needs of the corporation
+has been developed, it must be implemented quickly. Administrators must know that the
+backup systems that are in place will work each time and that the data are properly
+protected. These systems must be reviewed once or twice per year to ensure that they
+are delivering the protection that the business needs in the most cost-effective manner.</p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;In conclusion, there are high administrative and maintenance costs to the firm for
+DM in terms of both time and money. Failure to recognize the investment necessary to
+maintain the system can lead to data corruption and system failure.</p>
+            <center><h2>CONCLUSION</h2></center>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;DM helps deliver tremendous insights for businesses into the problems they face
+and aids in identifying new opportunities. It further helps businesses to solve more
+complex problems and make smarter decisions. DM is a potentially powerful tool for
+companies; however, more research is needed to measure the benefits of DM. If managers
+are better able to quantify the benefits of DM, they will be in a better position to justify
+its relatively high costs. In concert with better justification and acceptance will come the
+treatment of DM as a more legitimate and serous tool in organizational development.</p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;With DM, the same process should be applied as with any other organizational
+development tool. Once a DM process has been implemented, a company should take
+the steps needed to monitor the process and obtain feedback from all elements of the
+process. Monitoring and feedback will give a company the information necessary to
+determine if it is encountering any of the potential pitfalls and develop corrective
+strategies to take through the implementation → monitoring → feedback loop. For
+example, if a company sees lowered costs as a result of the use of information obtained
+through DM but loses revenues as a result of a loss of customers having concerns about
+privacy issues, then no real grain is made. Through the process of monitoring and
+feedback, firms can better maximize opportunities to increase revenues and lower costs
+while minimizing the risks posed by any of the pitfalls to DM.</p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Regardless of the many pitfalls that were found and discussed by this chapter, DM
+should still be considered as a valuable tool to many corporations. DM is only a
+beginning. DM does not make decisions, people do —knowledge and experience are the
+most important factors.</p>
+            <center><h2>REFERENCES</h2></center>
+            <p>Abbot, D. (November 2001). Data mining accuracy. Available online at: <a href="http://www.the_modeling_agency.com">http://www.the_modeling_agency.com</a></p>
+            <p>Abramowicz, W., & Zurada, J. (2001).<em> Knowledge discovery for business information systems</em>. Boston, MA: Kluwer Academic Publishers.</p>
+            <p>Anonymous (October 2001). Data mining/CRM: Searching for an ROI. Chain Store Age,
+                <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Retail IT 2001, 24-26.</p>
+            <p>Atkins, M.E. (2000). A jump start in winning: understanding enterprise data quality<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;management. Available online at <a href="http://www.datawarehouse.com/iknowledge/articles/article.efm?ContentID=278">http://www.datawarehouse.com/iknowledge/articles/article.efm?ContentID=278.</a></p>
+            <p>Australian National University. (2001). Data mining from a statistical perspective.
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Available online at: <a href="http://wwwmaths.anu.edu.au/~johnm/dm/dmpaper.html">http://wwwmaths.anu.edu.au/~johnm/dm/dmpaper.html.</a></p>
+            <p>Berger, J.O. & Berry, D.A. (1988). The relevance of stopping rules in statistical inference.
+                <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;In S. Gupta & J.O. Berger (eds.) <em>Statistical decision theory and related topics</em><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;S.Springer-Verlag.</p>
+            <p>Berry, M. & Linoff, G. (2000). Mastering data mining: The art and science of customer <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;relationship management. New York: Wiley Computer Publishing.</p>
+            <p>Business Lounge (2001). Data mining: A new branch of knowledge discovery. Available <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;online at: <a href="<http://www.bl.com.au/pages/articles/data-mining.htm">http://www.bl.com.au/pages/articles/data-mining.htm</a>.</p>
+            <p>Chen, L. & Sakaguchi, T. (2000). Disadvantages of data mining. Information Systems
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Management, 17(1), 65.</p>
+            <p>Chen, Z. (2001). Data mining and uncertain reasoning, An integrated approach. New
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;York: John Wiley & Sons, Inc.</p>
+            <p>Chung, H. M. (1999). Data mining. Journal of Management Information Systems,16(1),<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;11-17.</p>
+            <p>Cline, K. (1997). Data mining’s promise & pitfalls, Banking Strategies LXXIII, 40-46.<br> Coy, P. (1997). He who mines data may strike fool’s gold. Business Week, #3531, 40.
+            <br>DataMines for Data Warehouses (2001).Available online at: <a href="http://www.ite.poly.edu/mg/mg693/e0025984/projects/WrightBro/DforD.htm">http://www.ite.poly.edu/mg/mg693/e0025984/projects/WrightBro/DforD.htm</a></p>
+            <p>Dietterich, T.G. (1999). Machine learning. In R. Wilson and F. Keil (eds.) The MIT
+                <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<em>encyclopedia of the cognitive sciences. Cambridge, MA</em>: MIT Press.</p>
+            <p>E-commag (2001). Solutions to data inaccuracies. Available online at: <a href="http://www. Ecommag.com">http://www. Ecommag.com.</a></p>
+            <p>Electronic Textbook Statsoft.com (2001). Data mining techniques. Available online at:
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://www.statsoft.com/textbook/stdatmin.html">http://www.statsoft.com/textbook/stdatmin.html.</a></p>
+             <p>Griffin, J. (2000), Fundamental pitfalls to avoid in your data warehouse. Available online<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;at: <a href="http://www.datawarehouse.com/iknowledge/article/">http://www.datawarehouse.com/iknowledge/article/.</a></p>
+            <p>Griffin, J. (2001). Four big pitfalls to avoid when Web-enabling your data warehouse - <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;and how to avoid them. Available online at:<a href="http://www.datawarehouse.com /
+            iknowledge/articles/article.cfm?contentID=1214" >http://www.datawarehouse.com /
+            iknowledge/articles/article.cfm?contentID=1214.</a></p>
+            <p>Groth, R. (2001). Data mining: Building competitive advantage. New York: Prentice Hall.<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Gunter, B. (1996). Data mining: Mother lode or fool’s gold? Quality Progress, 29 (4), 113-118.</p>
+            <p>Hand, D., Mannila, H., & Smyth, P. (2001). Principles of data mining. Cambridge, MA:
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;MIT Press.</p>
+            <p>Hoss, D. (2001). Data mining: Pitfalls. Available online at:<a href="http://www.datawarehouse.com">http://www.datawarehouse.com.</a></p>
+            <p>International Knowledge Discovery Institute (1999). What is data mining? Available
+            online at: <a href="http://www.ikdi.net/data-mining.html">http://www.ikdi.net/data-mining.html.</a></p>
+            <p>Investor Home (1999). Data mining. Available online at:<a href="http://www.investorhome.com/mining.htm" >http://www.investorhome.com/mining.htm.</a></p>
+                <p>Jensen, D. (1999). Data snooping, dredging and fishing: the dark side of data mining. A
+                    SIGKDD99 Panel Report. 1 (2), 52, ACM, Inc.<br></p>
+                <p>Jensen, H. (2001) Using data mining with statistics. Available online at:<a href="http://ww w/
+                    isi.edu"> http://ww w/isi.edu.</a></p>
+                <p>Jones, L. (2001). Neural networks. Available online at:<a href="http://ei.cs.vt.edu/~NEURALNET/html" >http://ei.cs.vt.edu/~NEURALNET/html.</a></p>
+                <p>Judson, H. (2000). Make data mining work for you. Available online at:<a href="http://wwwksi.cpsc.ucalgary.ca" >http://wwwksi.cpsc.ucalgary.ca.</a></p>
+                <p>KDNuggets (2001). Data mining frequently asked questions. Available online at: <a hre="http://www.kdnuggcts.com/publications/index.html#Definitions">http://www.kdnuggcts.com/publications/index.html#Definitions.</a></p>
+                <p>Knowledge Acquisition Discovery Management (1997). Introduction to data mining and<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;knowledge discovery. Available online at: <a href="http://scanner-group.mit.edu /htdocs/thesis/angeclagethesis.html">http://scanner-group.mit.edu /htdocs/thesis/angeclagethesis.html.</a></p>
+            
+                <p>McQueen, G. & Thorley, S. (1999). Mining fool’s gold. <em>Financial Analysts Journal,</em>
+                    Available online at:<a href="http://www.indexfunds.com/articles/19990315_miningiss_gen RS.htm" >http://www.indexfunds.com/articles/19990315_miningiss_gen RS.htm.</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+                
+                <p>META Group (2001). META Group research summary. The Internet <a href="http://www.metagroup.com/"></a>                        http://www.metagroup.com/.http://www.metagroup.com/</p>
+               
+                <p>Montana, J.C. (2001). Data mining: A slippery slope, <em>Information Management Journal,</em>35 (Oct), 50-54.<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+                
+                <p>Moss, L.( 2000).Data warehouse goals and objectives: Part 3:Long-term objectives.<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Available online at <a href="http://www.datawarehouse.com/iknowledge/articles/topic_sub.cfm">http://www.datawarehouse.com/iknowledge/articles/topic_sub.cfm>.</a></p>
+                
+                <p>Numerical Machine Learning (1997). What is data mining? Available online at:<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="http://www.cc.gatech.edu/~kingd/datamine/datamine.html">http://www.cc.gatech.edu/~kingd/datamine/datamine.html.</a></p>
+               
+                <p>Pagallo, G. & Haussler D. (1990). Boolean feature discovery in empirical learning.<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<em>Machine Learning, 5(1)</em>, pp. 71-99, March</p>
+               
+                <p>Parsaye, K. (1995). Using correct data. Available online at: <http://www.datamining.com>.
+                    Pyle, D. (1999).<em> Data preparation for data mining.</em> San Francisco, CA: Morgan Kaufmann.
+                    Saarenvirta, G. (February). Slice and dice. <em>CMA Management,</em> 73(1), 26-30.
+                    Sauter, V. (1999). Intuitive decision-making.<em> Communications of the ACM,</em> 42(6), 109-115.
+                    Sethi, I. K. (2001).<em> Data mining: An introduction. </em>Available online at:<a href="http://www.cs.ubc.ca/nest/temporal.html" >http://www.cs.ubc.ca/nest/temporal.html.</a></p>
+
+                 <p>Teo, T.S.H. & Ang, J.S.K. (2000). Building a data warehouse at the housing and <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                     development board. <em>Database for Advances in Information Systems,</em>V31, 35-45.</p>
+               
+                <p>Two Crows Corporation (2001).Two Crows White Paper:Scalable data mining.Available <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    online at: <a href="http://www.twocrows.com/whilep.htm">http://www.twocrows.com/whilep.htm.</a></p>
+                
+                <p>Wasserman, M. (1999). Efficiency as an issue in cognitive architectures, trust your data? <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    Available online at:<a href="http://www.bos.frb.org"> http://www.bos.frb.org.</a></p>
+             
+                <p>Wu, J. (2000). A framework for information quality in a data warehouse. <em>NCR: Data
+                    <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;warehousing report,</em> 3(4)</p>
+                    
+                </div>
+                </body>
+                <style>
+                    body
+                    {
+                        margin: 5em;
+                        padding: 10px;
+                    }
+                    p
+                    {
+                        text-align: justify;
+                    }
+    
+                </style>
+</html>
